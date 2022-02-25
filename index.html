@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Landing Page - Brandon George
+-->
+<html>
+	<head>
+		<title>Brandon George | Data Scientist. Explorer. Human.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#0064ff">
+		<meta name="msapplication-TileColor" content="#0064ff">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="shortcut icon" type="svg" href="favicon.svg">
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<section>
+					<div>
+						
+						<!-- Greeting -->
+						<h1><span class="typed-text"></span><span class="cursor"></span><span id="cursor"><font face="Helvetica Light" size="50px" color="#fff">|</font></span>I'm Brandon.</h1>
+						
+						<!-- Sub Greeting -->
+						<p>I'm a geospatial data scientist a with passion for nature. <br> I build bridges between information and understanding.</p>
+						
+						<!-- Buttons -->
+						<a href="https://linkedin.com/in/brandonjgeo" target="blank" class="button">About</a>
+						<a href="https://storymaps.arcgis.com/stories/4504ddc064054ea594df8d1b34fe0b1e" target="blank" class="button">Work</a>
+						<a href="mailto:contact@brandongeo.com" target="blank" class="button">Contact</a>
+
+						<!-- Greeting -->
+						<script>
+							const typedTextSpan = document.querySelector(".typed-text");
+							const cursorSpan = document.querySelector(".cursor");
+							const textArray = ["Hello.","Hiya.", "Hola.", "你好。", "Bonjour.","Allô.","Ciao.", "Hej.", "Hallo.", "Привет.", "こんにちは", "नमस्ते|", "سلام" ,"مرحبا" ,"שלום"];
+							const typingDelay = 200;
+							const erasingDelay = 100;
+							const newTextDelay = 2000; // Delay between current and next text
+							let textArrayIndex = 0;
+							let charIndex = 0;
+							function type() {
+							  if (charIndex < textArray[textArrayIndex].length) {
+								if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+								typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+								charIndex++;
+								setTimeout(type, typingDelay);
+							  }
+							  else {
+								cursorSpan.classList.remove("typing");
+								  setTimeout(erase, newTextDelay);
+							  }
+							}
+							function erase() {
+								if (charIndex > 0) {
+								if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+								typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+								charIndex--;
+								setTimeout(erase, erasingDelay);
+							  }
+							  else {
+								cursorSpan.classList.remove("typing");
+								textArrayIndex++;
+								if(textArrayIndex>=textArray.length) textArrayIndex=0;
+								setTimeout(type, typingDelay + 1100);
+							  }
+							}
+							document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+							  if(textArray.length) setTimeout(type, newTextDelay + 250);
+							});
+						  </script>
+					</div>
+				</section>
+			</header>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://linkedin.com/in/brandonjgeo" target="blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/brandonjgeo" target="blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://twitter.com/brandonjgeo" target="blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://instagram.com/brandonjgeo" target="blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://youtube.com/brandonjgeo" target="blank" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>
+					<li><a href="https://open.spotify.com/user/brandonjgeo?si=c13c9626c43a408b" target="blank" class="icon brands fa-spotify"><span class="label">Spotify</span></a></li>
+					<li><a href="https://behance.net/brandonjgeo" target="blank" class="icon brands fa-behance-square"><span class="label">Behance</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Brandon George</li><li>Expanding the horizon.</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script> 
+		
+			<!-- Cursor Script -->
+			<script>
+				var cursor = true;
+				var speed = 500;
+				setInterval(() => {
+				if(cursor) {
+					document.getElementById('cursor').style.opacity = 0;
+					cursor = false;
+				}else {
+					document.getElementById('cursor').style.opacity = 1;
+					cursor = true;
+				}
+				}, speed);
+			</script>
+			
+	</body>
+</html>
