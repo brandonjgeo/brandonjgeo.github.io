@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 /*
 	Landing Page - Brandon George
@@ -159,8 +160,8 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Helvetica", sans-serif;
-		font-weight: 300;
+		font-family: "Righteous", sans-serif;
+		font-weight: 400; /* 300 for Helvetica*/
 		font-size: 1rem;
 		line-height: 1.65;
 	}
