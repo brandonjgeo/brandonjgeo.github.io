@@ -1,116 +1,566 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Brandon George | Geospatial Scientist</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-		<link rel="manifest" href="favicons/site.webmanifest">
-		<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#ffffff">
-		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="theme-color" content="#ffffff">
-		
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ECMXS3JB51"></script>
-		<!-------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Brandon George | Geospatial Scientist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Brandon George — Geospatial Scientist. I build bridges between information and understanding." />
 
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-			gtag('config', 'G-ECMXS3JB51');
-		</script>
-	</head>
-	<body class="is-preload">
+<style>
+  :root{
+    --navy-0:#08111e;
+    --navy-1:#0d1a2b;
+    --navy-2:#152436;
+    --line:rgba(237,233,224,0.10);
+    --line-strong:rgba(237,233,224,0.22);
+    --paper:#EDE9E0;
+    --paper-dim:rgba(237,233,224,0.62);
+    --paper-faint:rgba(237,233,224,0.35);
+    --gold:#D9A566;
+    --gold-dim:rgba(217,165,102,0.55);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy-0);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    font-weight:300;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:var(--navy-0);}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    line-height:1.1;
+    margin:0;
+  }
+  .mono{
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit;text-decoration:none;}
 
-				<!-- Header -->
-					<header id="header">
-						<div class="content">
-							<div class="inner">
-								<h1><span class="typed-text"></span><span class="cursor"></span><span id="cursor"></span><cursor></cursor> I'm Brandon.</h1>
-						
-								<!-- Sub Greeting -->
-								<p>I'm a geospatial scientist with a passion for nature. <br> I build bridges between information and understanding.</p>
-								<!-- Greeting -->
+  .wrap{max-width:900px;margin:0 auto;padding:0 32px;}
 
-								<script>
-									const typedTextSpan = document.querySelector(".typed-text");
-									const cursorSpan = document.querySelector(".cursor");
-									const textArray = ["Hello.","Hiya.", "Hola.", "你好。", "Bonjour.","Allô.","Ciao.", "Hej.", "Hallo.", "Привет.", "こんにちは", "नमस्ते|", "سلام" ,"مرحبا" ,"שלום"];
-									const typingDelay = 200;
-									const erasingDelay = 100;
-									const newTextDelay = 2000; // Delay between current and next text
-									let textArrayIndex = 0;
-									let charIndex = 0;
-									function type() {
-									if (charIndex < textArray[textArrayIndex].length) {
-										if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-										typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-										charIndex++;
-										setTimeout(type, typingDelay);
-									}
-									else {
-										cursorSpan.classList.remove("typing");
-										setTimeout(erase, newTextDelay);
-									}
-									}
-									function erase() {
-										if (charIndex > 0) {
-										if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-										typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-										charIndex--;
-										setTimeout(erase, erasingDelay);
-									}
-									else {
-										cursorSpan.classList.remove("typing");
-										textArrayIndex++;
-										if(textArrayIndex>=textArray.length) textArrayIndex=0;
-										setTimeout(type, typingDelay + 1100);
-									}
-									}
-									document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-									if(textArray.length) setTimeout(type, newTextDelay + 250);
-									});
-								</script>
-								<!-- Nav Buttons -->
-								<ul class="actions special">
-								<li><a href="https://linkedin.com/in/brandonjgeo" target="blank" class="button"><span class="label">About</span></a></li>
-								<li><a href="https://github.com/brandonjgeo" target="blank" class="button""><span class="label">Code</span></a></li>
-								<li><a href="https://storymaps.arcgis.com/stories/4504ddc064054ea594df8d1b34fe0b1e" target="blank" class="button"><span class="label">Portfolio</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</header>
+  /* wind canvas — the signature */
+  #wind{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+  }
+  /* faint graticule overlay */
+  .grid{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background-image:
+      linear-gradient(to right, rgba(237,233,224,0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(237,233,224,0.03) 1px, transparent 1px);
+    background-size:120px 120px;
+    pointer-events:none;
+  }
+  /* vignette so content is legible */
+  .vignette{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    background:radial-gradient(ellipse at center, transparent 30%, var(--navy-0) 95%);
+    pointer-events:none;
+  }
 
-				<!-- Main -->
-					<div id="main">
-					</div>
+  /* header */
+  header{
+    position:relative;
+    z-index:2;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:80px 0 120px;
+  }
+  .coord{
+    position:absolute;
+    top:32px; right:32px;
+    font-size:11px;
+    color:var(--paper-faint);
+    text-align:right;
+    letter-spacing:0.05em;
+  }
+  .coord span{display:block;line-height:1.5;}
+  .coord .val{color:var(--paper-dim);}
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer> 
+  .brand-mark{
+    position:absolute;
+    top:32px; left:32px;
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--paper-faint);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand-mark::before{
+    content:"";
+    width:14px;height:1px;
+    background:var(--gold);
+  }
 
-			</div> 
+  header h1{
+    font-size:clamp(48px,9vw,92px);
+    line-height:1;
+    margin-bottom:28px;
+  }
+  header h1 .hi{
+    color:var(--gold);
+    font-style:italic;
+    display:block;
+    font-size:0.55em;
+    margin-bottom:12px;
+    letter-spacing:0;
+    min-height:1.1em;
+  }
+  header h1 .cursor{
+    display:inline-block;
+    margin-left:2px;
+    font-weight:300;
+    color:var(--gold);
+    animation:blink 1s step-end infinite;
+  }
+  header h1 .cursor.typing{animation:none;}
+  @keyframes blink{
+    50%{opacity:0;}
+  }
+  header .tagline{
+    font-size:clamp(16px,2vw,19px);
+    color:var(--paper-dim);
+    max-width:520px;
+    line-height:1.6;
+    margin-bottom:44px;
+  }
+  .actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border:1px solid var(--line-strong);
+    border-radius:100px;
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:0.03em;
+    transition:all .25s ease;
+    font-family:'JetBrains Mono',monospace;
+  }
+  .btn:hover{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+  .btn.primary{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:var(--navy-0);
+  }
+  .btn.primary:hover{
+    background:transparent;
+    color:var(--gold);
+  }
 
-		<!-- BG -->
-			<div id="bg"></div>
+  .scroll-hint{
+    position:absolute;
+    bottom:36px; left:32px;
+    font-size:10px;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--paper-faint);
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .scroll-hint::before{
+    content:"";
+    width:1px;height:28px;
+    background:linear-gradient(to bottom, var(--gold), transparent);
+  }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  /* sections */
+  main{position:relative;z-index:2;}
+  section{
+    padding:110px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+  main > section:first-child{border-top:none;}
 
-	</body>
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.24em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px;height:1px;
+    background:var(--gold);
+  }
+  h2{
+    font-size:clamp(28px,4vw,38px);
+    margin-bottom:32px;
+    max-width:20ch;
+  }
+
+  section p.lede{
+    font-size:17px;
+    color:var(--paper-dim);
+    max-width:56ch;
+    margin-bottom:16px;
+  }
+
+  /* project list */
+  .proj{
+    display:grid;
+    grid-template-columns:56px 1fr auto;
+    gap:24px;
+    align-items:start;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+    transition:padding .25s ease;
+  }
+  .proj:last-child{border-bottom:1px solid var(--line);}
+  .proj:hover{padding-left:8px;}
+  .proj .idx{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--gold-dim);
+    font-size:13px;
+    padding-top:4px;
+  }
+  .proj h3{
+    font-size:22px;
+    margin-bottom:6px;
+    transition:color .25s ease;
+  }
+  .proj:hover h3{color:var(--gold);}
+  .proj p{
+    color:var(--paper-dim);
+    font-size:14.5px;
+    max-width:60ch;
+  }
+  .proj .arrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:14px;
+    color:var(--paper-faint);
+    padding-top:8px;
+    transition:transform .25s ease, color .25s ease;
+  }
+  .proj:hover .arrow{color:var(--gold); transform:translate(4px,-4px);}
+
+  /* contact */
+  #contact{
+    padding:130px 0 110px;
+  }
+  #contact h2{
+    font-size:clamp(36px,6vw,56px);
+    max-width:14ch;
+    margin-bottom:40px;
+  }
+
+  footer{
+    position:relative;
+    z-index:2;
+    padding:28px 0 40px;
+    border-top:1px solid var(--line);
+    background:var(--navy-0);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:var(--paper-faint);
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:0.05em;
+  }
+
+  @media (max-width:640px){
+    .coord,.brand-mark{font-size:10px;}
+    header{padding:60px 0 100px;}
+    section{padding:80px 0;}
+    .proj{grid-template-columns:36px 1fr; grid-template-areas:"idx body" "idx body" "arrow arrow"; row-gap:12px;}
+    .proj .arrow{padding-top:0;}
+    #contact h2{font-size:36px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    #wind{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="wind"></canvas>
+<div class="grid"></div>
+<div class="vignette"></div>
+
+<header>
+  <div class="brand-mark mono">BG</div>
+  <div class="coord mono">
+    <span id="clock" class="val">--:--:-- UTC</span>
+    <span>N 34.05° · W 118.24°</span>
+  </div>
+
+  <div class="wrap">
+    <h1><span class="hi"><span class="typed-text"></span><span class="cursor">|</span></span>I'm Brandon.</h1>
+    <p class="tagline">I'm a geospatial scientist with a passion for nature.<br>I build bridges between information and understanding.</p>
+    <div class="actions">
+      <a class="btn primary" href="#work">View work</a>
+      <a class="btn" href="https://github.com/brandonjgeo" target="_blank" rel="noopener">Code ↗</a>
+      <a class="btn" href="https://storymaps.arcgis.com/stories/4504ddc064054ea594df8d1b34fe0b1e" target="_blank" rel="noopener">Portfolio ↗</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint mono">Scroll</div>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h2>Reading landscapes, translating them.</h2>
+    <p class="lede">I'm a geospatial scientist working across ArcGIS, Python, and remote sensing — with a soft spot for what small unmanned aircraft can tell us about the land underneath them. My work usually sits between raw spatial data and the people trying to act on it: carbon estimation from drone imagery, Python tools that speed up GIS teams, and getting spatial answers in front of decisions when they need to be made.</p>
+    <p class="lede">I hold a Master's in GIS from CSU Long Beach and a Bachelor's in Geography &amp; GIS from CSU Sacramento. I've volunteered with URISA GISCorps since 2021, and I'm currently paying close attention to where agentic AI meets geospatial workflows.</p>
+    <p class="lede">Off a screen, I'm in the landscape itself.</p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow">Selected work</div>
+    <h2>Projects &amp; code</h2>
+
+    <a class="proj" href="https://storymaps.arcgis.com/stories/4504ddc064054ea594df8d1b34fe0b1e" target="_blank" rel="noopener">
+      <span class="idx mono">01</span>
+      <div>
+        <h3>Story portfolio</h3>
+        <p>An ArcGIS StoryMap collecting the projects, maps, and moments that shape how I think about the work.</p>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="proj" href="https://github.com/brandonjgeo/GIS-Pro" target="_blank" rel="noopener">
+      <span class="idx mono">02</span>
+      <div>
+        <h3>GIS-Pro</h3>
+        <p>A toolkit built to support and empower GIS professionals and enthusiasts with everyday workflows.</p>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="proj" href="https://github.com/brandonjgeo/ArcGIS-API-for-Python-Raster-Processing" target="_blank" rel="noopener">
+      <span class="idx mono">03</span>
+      <div>
+        <h3>Carbon sequestration from UAV imagery</h3>
+        <p>Raster processing behind a carbon sequestration report for River Ridge Ranch, built from unoccupied aerial vehicle data.</p>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="proj" href="https://github.com/brandonjgeo/ArcGIS-Pro-Python-Tools" target="_blank" rel="noopener">
+      <span class="idx mono">04</span>
+      <div>
+        <h3>ArcGIS Pro Python tools</h3>
+        <p>An archive of Python code samples and toolboxes built for use directly inside ArcGIS Pro.</p>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a class="proj" href="https://github.com/brandonjgeo/ArcGIS-Python-API-Admin-Notebooks" target="_blank" rel="noopener">
+      <span class="idx mono">05</span>
+      <div>
+        <h3>Enterprise admin notebooks</h3>
+        <p>Jupyter notebooks for administering ArcGIS Enterprise and ArcGIS Online at scale.</p>
+      </div>
+      <span class="arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Say hello</div>
+    <h2>Let's build something.</h2>
+    <div class="actions">
+      <a class="btn primary" href="https://linkedin.com/in/brandonjgeo" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/brandonjgeo" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Brandon George</span>
+    <span>Geospatial Scientist</span>
+  </div>
+</footer>
+
+<script>
+// clock
+function tickClock(){
+  const d = new Date();
+  const s = d.toISOString().slice(11,19) + ' UTC';
+  document.getElementById('clock').textContent = s;
+}
+tickClock();
+setInterval(tickClock, 1000);
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// typed hello in many languages
+(function(){
+  const typedTextSpan = document.querySelector('.typed-text');
+  const cursorSpan = document.querySelector('.cursor');
+  const textArray = ["Hello.","Hiya.","Hola.","你好。","Bonjour.","Allô.","Ciao.","Hej.","Hallo.","Привет.","こんにちは","नमस्ते","سلام","مرحبا","שלום"];
+  const typingDelay = 200;
+  const erasingDelay = 100;
+  const newTextDelay = 2000;
+  let textArrayIndex = 0;
+  let charIndex = 0;
+
+  function type(){
+    if (charIndex < textArray[textArrayIndex].length){
+      if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      cursorSpan.classList.remove('typing');
+      setTimeout(erase, newTextDelay);
+    }
+  }
+  function erase(){
+    if (charIndex > 0){
+      if (!cursorSpan.classList.contains('typing')) cursorSpan.classList.add('typing');
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      cursorSpan.classList.remove('typing');
+      textArrayIndex = (textArrayIndex + 1) % textArray.length;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+  setTimeout(type, newTextDelay + 250);
+})();
+
+// smooth in-page anchor scrolling (guaranteed, not reliant on CSS)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e){
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+// windy.com-style particle field
+(function(){
+  const canvas = document.getElementById('wind');
+  const ctx = canvas.getContext('2d');
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  let W = 0, H = 0;
+
+  function resize(){
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    // prime background
+    ctx.fillStyle = '#08111e';
+    ctx.fillRect(0, 0, W, H);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // static noise field — smooth pseudo-random vector angles
+  function field(x, y, t){
+    const nx = x * 0.0018;
+    const ny = y * 0.0022;
+    return Math.sin(nx + t) * 1.6
+         + Math.cos(ny * 1.4 - t * 0.7) * 1.3
+         + Math.sin((nx + ny) * 0.6) * 0.8;
+  }
+
+  const NUM = Math.min(420, Math.floor(W * H / 3600));
+  const particles = [];
+  for (let i = 0; i < NUM; i++){
+    particles.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      life: Math.random() * 220,
+      maxLife: 160 + Math.random() * 200
+    });
+  }
+
+  let t = 0;
+  function step(){
+    t += 0.0009;
+    // fade previous frame to leave trails (short trails)
+    ctx.fillStyle = 'rgba(8, 17, 30, 0.06)';
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.lineWidth = 0.7;
+    for (const p of particles){
+      const a = field(p.x, p.y, t);
+      const vx = Math.cos(a) * 0.9;
+      const vy = Math.sin(a) * 0.9;
+
+      // color varies with speed/angle for subtle depth
+      const alpha = 0.18 + 0.35 * Math.min(1, p.life / 60);
+      ctx.strokeStyle = `rgba(217, 165, 102, ${alpha.toFixed(3)})`;
+
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      p.x += vx;
+      p.y += vy;
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+
+      p.life++;
+      if (p.life > p.maxLife || p.x < -10 || p.x > W + 10 || p.y < -10 || p.y > H + 10){
+        p.x = Math.random() * W;
+        p.y = Math.random() * H;
+        p.life = 0;
+        p.maxLife = 160 + Math.random() * 200;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduced) step();
+})();
+</script>
+
+</body>
 </html>
