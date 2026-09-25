@@ -172,10 +172,10 @@
 <div class="sr-only" id="transcript">
   <h2>Reel transcript</h2>
   <p>Hello, in eight languages. I'm Brandon. Brandon George, Geospatial Scientist. Master's in GIS, CSU Long Beach.</p>
-  <p>Leading geospatial and remote sensing: program lead for a U.S. Army Corps of Engineers district.</p>
+  <p>Leading geospatial: program lead for a U.S. Army Corps of Engineers district.</p>
   <p>Enterprise geospatial, raw data to decisions: data, imagery, analysis, decisions. ArcGIS Enterprise, Online and Pro; Python and admin notebooks.</p>
-  <p>Agentic AI: question, fetch imagery, classify, analyze, verify, answer. Days of work, now multi-step spatial analysis, automated. Built GIS Pro, a top-ranked GIS assistant on the GPT Store: 25,000+ conversations, 500+ reviews.</p>
-  <p>Enterprise AI that teams can act on: from emerging tools to capability.</p>
+  <p>Agentic AI: question, fetch imagery, classify, analyze, verify, answer. Days of work, now multi-step spatial analysis, automated. Built GIS Pro, a GIS assistant on the GPT Store: 25,000+ conversations, 500+ reviews.</p>
+  <p>Enterprise AI teams can act on: from emerging tools to capability.</p>
   <p>Leading USACE's agentic AI sub-community of practice. Influence across lines, not down a chain of command. USACE leadership development programs.</p>
   <p>Focus: AI. Agentic AI. Enterprise AI. Leadership. Geospatial program, with remote sensing and an Army-authorized sUAS role. Enterprise geospatial. Featured at the Esri Federal GIS Conference, February 2026. Mentor: capability that outlasts any single project.</p>
   <p>Where the value sits now: the right question, a trusted answer, a defensible decision.</p>
@@ -732,7 +732,7 @@ function homeMarker(P, lt, a) {
 function worldText(lt, S) {
   const out = inv(2.6, 2.9, lt);
   if (out >= 1) return;
-  const l1 = 'Leading geospatial &', l2 = 'remote sensing.';
+  const l1 = 'Leading geospatial.';
   let sz, x = MX, y;
   if (PORT) {
     sz = Math.min(H1 * 1.05, fitSize(l1, 'serif', 400, false, W - 2 * MX, 90));
@@ -1076,7 +1076,7 @@ function aiB(lt) {
   ctx.fillStyle = rgba(INK);
   riseLine(Math.round(25000 * p).toLocaleString('en-US') + '+', R.cx + fw / 2, R.cy + ns * .3, lt, { size: ns, dur: .45, align: 'right' });
   label('CONVERSATIONS', R.cx, R.cy + ns * .3 + LBL * 2.5, { align: 'center', color: rgba(INK, .6 * inv(.15, .4, lt)) });
-  const l1 = 'Built GIS Pro,', l2 = 'a top-ranked GIS assistant.';
+  const l1 = 'Built GIS Pro,', l2 = 'a GIS assistant.';
   let sz, x = MX, y;
   if (PORT) { sz = Math.min(H1 * .9, fitSize(l2, 'serif', 400, true, W - 2 * MX, 60)); y = R.cy + R.R * 1.22 + H * .05 + sz; }
   else { sz = Math.min(H1 * .85, fitSize(l2, 'serif', 400, true, R.cx - R.R * 1.25 - MX - 40, 70)); y = H * .44; }
@@ -1257,7 +1257,7 @@ function leadText(lt) {
     const out = inv(mt - .02, mt + .15, lt);
     ctx.save(); ctx.globalAlpha = 1 - out; ctx.translate(0, -out * sz * .5);
     font(sz, 'serif', 400); ctx.fillStyle = rgba(COL.paper); riseLine("Leading USACE's", x, y, lt - .06, { size: sz });
-    font(sz, 'serif', 400, true); ctx.fillStyle = rgba(COL.gold); riseLine('agentic AI sub-CoP.', x, y + lh, lt - .14, { size: sz });
+    font(sz, 'serif', 400, true); ctx.fillStyle = rgba(COL.gold); riseLine('Agentic AI Sub-CoP.', x, y + lh, lt - .14, { size: sz });
     const my = y + lh + LBL * 3, ma = inv(.3, .55, lt);
     if (ma > 0) {
       ctx.globalAlpha = (1 - out) * ma;
@@ -1284,7 +1284,7 @@ function leadText(lt) {
 
 // ============================== S8 · RAPID-FIRE ==============================
 const CARDS = [
-  { w: ['AI.'], bg: 'n1', fg: 'paper', st: 'outline', sm: 'GIS PRO · TOP-RANKED GIS ASSISTANT', deco: 'grid', dir: 'L', big: 1 },
+  { w: ['AI.'], bg: 'n1', fg: 'paper', st: 'outline', sm: 'GIS PRO · GIS ASSISTANT', deco: 'grid', dir: 'L', big: 1 },
   { w: ['Agentic AI.'], bg: 'paper', fg: 'n0', st: 'mono', sm: '> MULTI-STEP SPATIAL ANALYSIS', deco: 'cursor', dir: 'T' },
   { w: ['Enterprise', 'AI.'], bg: 'gold', fg: 'n0', st: 'italic', sm: 'CAPABILITY TEAMS CAN ACT ON', deco: 'scan', dir: 'R' },
   { w: ['Leadership.'], bg: 'n0', fg: 'paper', st: 'sans', sm: 'AGENTIC AI SUB-COP LEAD · USACE', deco: 'net', dir: 'B' },
@@ -1726,7 +1726,7 @@ function compose(S) {
   at(8, a => { S.whoosh(a, 1.2, .26, false); S.crash(a, .22); });
   [17, 19, 21].forEach(b => at(b, a => { S.stab(a, Bb.map(n => n + 12), .12); S.whoosh(a, .35, .12, true); }));
   at(22, a => S.riser(a, 2 * BEAT, .2)); at(24, a => S.crash(a, .32));
-  // agentic AI: sixteenth-note arps (F then C), a blip per pipeline step, count-up ticks for GIS Pro
+  // Agentic AI: sixteenth-note arps (F then C), a blip per pipeline step, count-up ticks for GIS Pro
   const arpF = [65, 69, 72, 77, 81, 77, 72, 69], arpC = [67, 72, 76, 79, 84, 79, 76, 72];
   for (let k = 0; k < 64; k++) { const m = (k < 32 ? arpF : arpC)[k % 8]; at(24 + k * .25, a => S.arp(a, m, .05)); }
   for (let i = 0; i < 6; i++) { const f = 880 * 2 ** (i / 6); at(24 + (.3 + i * BEAT / 2) / BEAT, a => S.blip(a, f, .05)); }
